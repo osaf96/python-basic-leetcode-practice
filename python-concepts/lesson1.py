@@ -1,1 +1,0 @@
-print("hello, world from lesson1.py")
