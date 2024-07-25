@@ -32,3 +32,14 @@ for index, letter in enumerate(word):
 # The above code will print 0, a, 1, b, 2, c, 3, d, 4, e
 
 
+for number in range(1,10):
+    print(number)
+    
+while(number < 10):
+    print(number + 1)
+    number += 1
+    
+# The above code will print 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+# while loops are used to repeatedly execute a block of code as long as a condition is true.
+# for loops are used to iterate over a sequence of elements.
