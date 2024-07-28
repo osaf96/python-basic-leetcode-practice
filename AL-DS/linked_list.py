@@ -3,6 +3,9 @@
 # Each element (we will call it a node) of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null.
 # The entry point into a linked list is called the head of the list.By traversing the list from head to the end, we can access each node.
 
+from typing import Optional
+
+
 def linked_list():
     class Node:
         def __init__(self, data): # WHAT IS THIS?
@@ -58,3 +61,30 @@ def linked_list():
     
 linked_list() # 1 2 3 4
     
+# Given the head of a singly linked list, return the middle node of the linked list.
+
+# If there are two middle nodes, return the second middle node.
+class ListNode:
+     def __init__(self, val=0, next=None):
+         self.val = val
+         self.next = next
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow = fast = head
+        result = []
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+    
+        return slow         
+
+# Test the function
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+head.next.next.next.next.next = ListNode(6)
+
+print("Val",Solution().middleNode(head)) # 3
+ 
